@@ -1,13 +1,20 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
-    "target": "es2017",
-    "module": "commonjs",
-    "declaration": true,
-    "outDir": "./dist",
+    "target": "es6",
+    "module": "esnext",
+    "rootDir": "./src",
+    "outDir": "dist",
     "strict": true,
-    "esModuleInterop": true
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "declaration": true
   },
+  "lib": ["esnext"],
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "**/*.test.ts"]
+  "exclude": ["src/**/*.test.ts"]
 }

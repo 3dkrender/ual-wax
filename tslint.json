@@ -1,14 +1,15 @@
 {
-  "extends": "tslint:recommended",
+  "defaultSeverity": "error",
+  "extends": [
+    "@blockone/tslint-config-blockone/tslint-config"
+  ],
+  "jsRules": {},
   "rules": {
-    "max-line-length": {
-      "options": [160]
-    },
-    "new-parens": true,
-    "no-arg": true,
-    "no-bitwise": true,
-    "no-conditional-assignment": true,
-    "no-consecutive-blank-lines": false,
-    "no-console": false
+  },
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": [
+      "**/*.js"
+    ]
   }
 }

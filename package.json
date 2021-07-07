@@ -3,7 +3,13 @@
   "version": "1.4.4",
   "description": "",
   "main": "dist/index.js",
+  "contributors": [
+    "Aaron Cox",
+    "Johan Nordberg",
+    "3dkrender"
+  ],
   "scripts": {
+    "build-libs": "rollup --config rollup.config.js",
     "build": "tsc --build tsconfig.json",
     "lint": "tslint -p tsconfig.json"
   },
@@ -18,8 +24,29 @@
     "eosjs": "^20.0.3"
   },
   "devDependencies": {
+    "rollup": "^2.52.7",
+    "rollup-plugin-dts": "^3.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "@babel/preset-env": "^7.14.7",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-replace": "^2.4.2",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@babel/runtime": "^7.2.0",
+    "@blockone/tslint-config-blockone": "^4.0.1",
+    "@types/elliptic": "^6.4.10",
+    "@types/jest": "^26.0.21",
+    "@types/node": "^14.14.35",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4",
     "ts-loader": "^7.0.4",
-    "tslint": "^6.1.2",
-    "typescript": "^3.9.2"
+    "tslint": "^6.1.3",
+    "typescript": "^4.2.3"
+  },
+  "browser": {
+    "buffer": false,
+    "crypto": false
   }
 }
